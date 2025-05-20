@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 200px;
+    background-color: blue;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    font-size: 21px;
+    font-weight: bold;
+    list-style: none;
+}
+
+li {
+    margin-left: 70px;
+    margin-top: 70px;
+    width: 50px;
+    color: aqua;
+}
+
+.h1-2 {
+    font-size: 50px;
+}
+
+
+.topo {
+    margin-left: 70px;
+    margin-top: 180px;
+    height: 200px;
+}
+
+.topo p {
+    margin-top: 15px;
+    width: 360px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.button {
+    background-color: rgb(94, 177, 245);
+    color: black;
+    padding: 8px 30px;
+    border-radius: 25px;
+    border: 1.8px solid black;
+}
+
+.content-1 {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content-1 img {
+    margin-left: 80px;
+    height: 500px;
+}
+
+.content-text {
+    margin-top: 100px;
+    width: 450px;
+}
+
+.content-text p {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 38px;
+    margin-top: 170px;
+    margin-left: 80px;
+}
+
+.content-2 {
+    margin-top: 90px;
+}
+
+
+.todo-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    gap: 20px;
+}
+
+.content-itens {
+    background-color: rgb(188, 218, 243);
+    border: 0.8px solid rgb(94, 177, 245);
+    height: 300px;
+}
+
+.content-itens img {
+    margin: 15px 5px 0 5px;
+    border-radius: 10px;
+}
+
+.content-itens p {
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+.content-itens a {
+    border: 1px solid black;
+    border-radius: 13px;
+    background-color: rgb(94, 177, 245);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 65px;
+    width: 150px;
+    height: 30px;
+}
