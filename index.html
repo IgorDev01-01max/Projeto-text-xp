@@ -7,30 +7,46 @@
     <link rel="stylesheet" href="styles.css">
     <title>Portifólio IgorAlcantara</title>
 </head>
-
 <body>
 
-    <img src="./Img/iblackcapa.jpg" alt="" class="img-capa">
     <header>
-        <ul>
-            <li>Home</li>
-            <li>Projetos</li>
-            <li>Sobre</li>
-            <li>Contatos</li>
-        </ul>
+       <div class="tooop">
+        <a href="">Home</a>
+        <a href="">Sobre</a>
+        <a href="">Projetos</a>
+        <a href="">Visitar</a>
+       </div>
     </header>
      
     <nav>
-    <div class="topo">
-        <h1 class="h1-2">Olá, Eu sou Igor Alcantara.</h1>
-        <p>Desenvolvedor criativo focado em construir experiências digitais de interface intuitíva</p><br>
-        <br><a href="" class="button">Visite</a>
-    </div>
     
+    <div class="topo">
+        <h1 class="h1-2">Olá, Eu sou <span>Igor Alcantara.</span></h1>
+        <p>Desenvolvedor criativo focado em construir experiências digitais de interface intuitíva</p><br>
+        <br><a href="">Que bom, ver você por aqui</a>
+    </div>
+
+
+    <div class="formulario">
+
+    <form onsubmit="enviarFormulario()" class="formulario-1">
+        <label for="nome">Nome:</label>
+        <input type="text" placeholder="Digite seu nome aqui"  id="nome> name="nome" required>
+
+        <label for="email">email:</label>
+        <input type="email" placeholder="Digite seu Email." id="email" name="email" required>
+
+        <label for="tell">Tell:</label>
+        <input type="tel"  placeholder="Digite seu Contato."  ="tell" name="tell" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
     
     </nav>
 
     <main class="content-1">
+        <img src="./Img/gorilarobo.jpg" alt="" class="gorilarobo">
         <div>
             <img src="./Img/Captura de tela 2025-05-18 214826.png" alt="">
         </div>
@@ -43,10 +59,11 @@
                 trabalho e a todos relacionado.</p>
         </div>
     </main>
-
-    <h3>Projétos</h3>
-
+    <h3>Pro<span>jétos</span></h3>
+    
     <section class="content-2">
+
+        
 
         <div class="todo-conteudo">
             <div class="content-itens">
