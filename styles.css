@@ -4,30 +4,60 @@
     margin: 0;
 }
 
+body {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+   
+}
+
+.Contatos {
+    margin-left: 00px;
+}
+
+.img-capa {
+    width: 100vw;
+    position: fixed;
+    opacity: .1;
+}
+
 header {
     width: 100vw;
     height: 200px;
-    background-color: blue;
+    background-color: rgb(58, 77, 77);
 }
 
 header ul {
     display: flex;
     gap: 30px;
-    font-size: 21px;
+    font-size: 24px;
     font-weight: bold;
     list-style: none;
 }
 
 li {
-    margin-left: 70px;
-    margin-top: 70px;
+    margin-left: 60px;
+    margin-top: 50px;
     width: 50px;
-    color: aqua;
+    color: white;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+    color: blue;
 }
 
 .h1-2 {
     font-size: 50px;
+    color: white;
+
 }
+
+
+
 
 
 .topo {
@@ -41,14 +71,22 @@ li {
     width: 360px;
     font-size: 20px;
     font-weight: lighter;
+    color: white;
 }
 
 .button {
+    cursor: pointer;
     background-color: rgb(94, 177, 245);
     color: black;
     padding: 8px 30px;
     border-radius: 25px;
-    border: 1.8px solid black;
+    border: 1.8px solid white
+}
+
+.button:hover {
+    transform: translateY(-5px);
+   transition: 0.5s;
+   color: cadetblue;
 }
 
 .content-1 {
@@ -60,6 +98,9 @@ li {
 .content-1 img {
     margin-left: 80px;
     height: 500px;
+    border-radius: 35px;
+    border: 1px solid rgb(94, 177, 245);
+    box-shadow: 5px 5px 10px #acabab;
 }
 
 .content-text {
@@ -70,16 +111,19 @@ li {
 .content-text p {
     font-size: 18px;
     font-weight: lighter;
+    color: white;
 }
 
 h2 {
     font-size: 40px;
+    color: white;
 }
 
 h3 {
     font-size: 38px;
     margin-top: 170px;
     margin-left: 80px;
+    color: white;
 }
 
 .content-2 {
@@ -95,10 +139,16 @@ h3 {
     gap: 20px;
 }
 
+.todo-conteudo p {
+    color: black;
+}
+
 .content-itens {
-    background-color: rgb(188, 218, 243);
+    background-color: rgb(103, 131, 155);
     border: 0.8px solid rgb(94, 177, 245);
     height: 300px;
+    border-radius: 10px;
+    margin-bottom: 35px;
 }
 
 .content-itens img {
@@ -108,17 +158,21 @@ h3 {
 
 .content-itens p {
     margin-top: 15px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 .content-itens a {
-    border: 1px solid black;
+    font-size: 20px;
+    border: 1px solid white;
     border-radius: 13px;
-    background-color: rgb(94, 177, 245);
+    background-color: rgb(19, 71, 114);
+    color: whitesmoke;
     display: flex;
     justify-content: center;
     margin-top: 10%;
     margin-left: 65px;
     width: 150px;
     height: 30px;
+    cursor: pointer;
 }
+
