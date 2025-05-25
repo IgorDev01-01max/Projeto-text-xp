@@ -5,30 +5,43 @@
 }
 
 body {
-  background-color: black;
-    
+    background-color: black;
+
 }
 
 
 nav {
     display: flex;
-   
+    position: relative;
+
 }
+
 .formulario {
- 
+
     width: 40vw;
-    margin-top: 190px;
+    margin-top: 105px;
     margin-left: 100px;
 }
+
 input {
+    position: relative;
     width: 300px;
     height: 25px;
     border-radius: 10px;
     border: 1px solid #669fe9;
     background-color: rgb(19, 71, 114);
     color: white;
-    box-shadow:  0px 0px 20px  rgb(94, 177, 245);
-     
+    box-shadow: 0px 0px 20px rgb(94, 177, 245);
+    cursor: pointer;
+}
+
+input:hover {
+    transform: translate3d(-5px, -5px, 0);
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(94, 177, 245);
+    height: 30px;
 }
 
 input::placeholder {
@@ -37,6 +50,20 @@ input::placeholder {
 
 label {
     color: white;
+    margin-bottom: 7px;
+
+
+}
+
+
+h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 23px;
+    margin-left: 300px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: rgb(94, 177, 245);
 }
 
 .formulario-1 {
@@ -52,19 +79,29 @@ button {
     margin-top: 10px;
     width: 100px;
     height: 30px;
-    margin-right: 70px;
+    margin-right: 17%;
     border-radius: 15px;
-    background-color:  rgb(94, 177, 245);
+    border: 1px solid rgb(94, 177, 245);
+    background-color: rgb(29, 80, 121);
+    color: aqua;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translate3d(-5px, -5px, 0);
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(94, 177, 245);
 }
 
 
-
 header {
-  width: 100vw;
-  height: 100px;  
-  background-color: royalblue; 
-  color: black;
-  box-shadow: 0px 0px 20px  rgb(94, 177, 245);
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(22, 63, 185);
+    color: black;
+    box-shadow: 0px 0px 20px rgb(94, 177, 245);
 }
 
 span {
@@ -114,11 +151,11 @@ span {
     font-weight: lighter;
     color: white;
 }
- 
+
 .topo a {
     margin-top: 20px;
     font-size: 20px;
-    border: 0.5px solid  rgb(94, 177, 245);
+    border: 0.5px solid rgb(94, 177, 245);
     color: whitesmoke;
     border-radius: 13px;
     background-color: rgb(19, 71, 114);
@@ -131,6 +168,7 @@ span {
     transform: translateY(-5px);
     transition: 0.5s;
     color: black;
+    border: 1px solid #e20ed1;
 }
 
 .content-1 {
@@ -177,8 +215,60 @@ h3 {
     color: white;
 }
 
+h6 {
+    font-size: 28px;
+    margin-top: 70px;
+    color: white;
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    font-size: 19px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 58px;
+    color: white;
+    gap: 15px;
+
+}
+
+
+
+li a {
+    background-color: rgb(94, 177, 245);
+    border: 1px solid rgb(94, 177, 245);
+    border-radius: 12px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    cursor: pointer;
+
+}
+
+li a:hover {
+    transform: translate3d(-5px, -5px, 0);
+    transition: 0.5s;
+    background-color: black;
+    color: aqua;
+}
+
 .content-2 {
     margin-top: 90px;
+    border: 1px solid rgb(94, 177, 245);
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgb(94, 177, 245);
+    position: relative;
+
+}
+
+.kingkong {
+    width: 100vw;
+    opacity: 0.1;
+    position: absolute;
 }
 
 
@@ -186,7 +276,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
     gap: 20px;
 }
 
@@ -199,7 +289,7 @@ h3 {
     border: 0.8px solid rgb(94, 177, 245);
     height: 300px;
     border-radius: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 75px;
 }
 
 .content-itens img {
@@ -208,16 +298,19 @@ h3 {
 }
 
 .content-itens p {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
     margin-top: 15px;
     margin-left: 70px;
 }
 
 .content-itens a {
     font-size: 20px;
-    border: 1px solid white;
+    border: 1px solid aqua;
     border-radius: 13px;
     background-color: rgb(19, 71, 114);
-    color: whitesmoke;
+    color: white;
     display: flex;
     justify-content: center;
     margin-top: 10%;
@@ -225,6 +318,7 @@ h3 {
     width: 150px;
     height: 30px;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .content-itens a:hover {
@@ -236,7 +330,12 @@ h3 {
 .content-itens:hover {
     transform: translateY(-5px);
     transition: 0.5s;
-    background-color: rgb(19, 71, 114);
+    background-color: rgb(12, 53, 87);
 }
 
 
+.codcapa {
+    width: 100vw;
+    opacity: 0.1;
+    position: absolute;
+}

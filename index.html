@@ -7,42 +7,43 @@
     <link rel="stylesheet" href="styles.css">
     <title>Portifólio IgorAlcantara</title>
 </head>
+
 <body>
 
     <header>
-       <div class="tooop">
-        <a href="">Home</a>
-        <a href="">Sobre</a>
-        <a href="">Projetos</a>
-        <a href="">Visitar</a>
-       </div>
+        <div class="tooop">
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Projetos</a>
+            <a href="">Visitar</a>
+        </div>
     </header>
-     
+
     <nav>
-    
-    <div class="topo">
-        <h1 class="h1-2">Olá, Eu sou <span>Igor Alcantara.</span></h1>
-        <p>Desenvolvedor criativo focado em construir experiências digitais de interface intuitíva</p><br>
-        <br><a href="">Que bom, ver você por aqui</a>
-    </div>
+        <img src="./Img/codcapa.jpg" alt="" class="codcapa">
+        <div class="topo">
+            <h1 class="h1-2">Olá, Eu sou <span>Igor Alcantara.</span></h1>
+            <p>Desenvolvedor criativo focado em construir experiências digitais de interface intuitíva</p><br>
+            <br><a href="">Que bom, ver você por aqui</a>
+        </div>
 
 
-    <div class="formulario">
+        <div class="formulario">
+            <h5>Entre em Contato:</h5>
+            <form onsubmit="enviarFormulario()" class="formulario-1">
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="Digite seu nome aqui" id="nome" name="nome required>
+        
+        <label for=" email">Email:</label>
+                <input type="email" placeholder="Digite seu Email." id="email" name="email" required>
 
-    <form onsubmit="enviarFormulario()" class="formulario-1">
-        <label for="nome">Nome:</label>
-        <input type="text" placeholder="Digite seu nome aqui"  id="nome> name="nome" required>
+                <label for="tell">Tell:</label>
+                <input type="tel" placeholder="Digite seu Contato." id="tell" name="tell" required>
 
-        <label for="email">email:</label>
-        <input type="email" placeholder="Digite seu Email." id="email" name="email" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
 
-        <label for="tell">Tell:</label>
-        <input type="tel"  placeholder="Digite seu Contato."  ="tell" name="tell" required>
-
-        <button type="submit">Enviar</button>
-    </form>
-    </div>
-    
     </nav>
 
     <main class="content-1">
@@ -55,19 +56,63 @@
             <h2>Desenvolvedor Software</h2><br>
             <p>Olá, meu nome é Igor. Sou um desenvolverdor apaixonado Por tecnologia da informação, dedicado a trabalhar
                 e melhorar a cada dia meus conhecimentos aplicando estudos e projétos prático e encarando cada desafio
-                com total cofiança e convicção, Sempre me comprometendo entregar o melhor que eu tenho, aos meus superiores a equipes de
+                com total cofiança e convicção, Sempre me comprometendo entregar o melhor que eu tenho, aos meus
+                superiores a equipes de
                 trabalho e a todos relacionado.</p>
+            <h6>Habi<span>lidades</span></h6>
+            <ul>
+                <li><a href="">HTML:5</a< /li>
+                <li><a href="">CSS</a< /li>
+                <li><a href="">GIT</a< /li>
+                <li><a href="">GITHUB</a< /li>
+                <li><a href="">JAVASCRIPT</a< /li>
+                <li><a href="">REACT</a></li>
+            </ul>
+
         </div>
     </main>
     <h3>Pro<span>jétos</span></h3>
-    
+
+
+    <img src="./Img/gorilaroobo.jpg" alt="" class="kingkong">
+
+
     <section class="content-2">
 
-        
 
         <div class="todo-conteudo">
             <div class="content-itens">
-                <img src="./Img/robo all home offce.jpg" alt="" >
+                <img src="./Img/logoinstagrammmm.jpg" alt="" class="tec">
+                <p>Projéto Clone Instagram</p>
+                <a>projeto</a>
+            </div>
+
+            <div class="content-itens">
+                <img src="./Img/conversor de moedas.jpg" alt="">
+                <p>Conversor de moédas</p>
+                <a>projeto</a>
+            </div>
+
+            <div class="content-itens">
+                <img src="./Img/calc.jpg" alt="">
+                <p>Calculadora digital</p>
+                <a>projeto</a>
+            </div>
+
+            <div class="content-itens">
+                <img src="./Img/All home offce 4.jpg" alt="">
+                <p>Portifólio Pessoal</p>
+                <a>projeto</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="content-3">
+        <div class="todo-conteudo">
+            <div class="content-itens">
+                <img src="./Img/robo all home offce.jpg" alt="">
                 <p>description</p>
                 <a>projeto</a>
             </div>
@@ -91,8 +136,25 @@
             </div>
 
         </div>
-
     </section>
 </body>
+
+
+
+<script src="./script.js">
+    function enviarFormulario() {
+        let nome = document.getElementById("nome").value;
+        let email = document.getElementById("email").value;
+        let tell = document.getElementById("tell").value;
+
+        let dadosFormulario = {
+            nome: nome,
+            email: email,
+            tell: tell
+        };
+
+
+    }
+</script>
 
 </html>
