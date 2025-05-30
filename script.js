@@ -11,3 +11,7 @@ const dadosFotmulario = {
 }
 
 console.log("dadosFotmulario", dadosFotmulario); 
+
+
+
+dadosFotmulario() {
