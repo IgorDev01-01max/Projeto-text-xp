@@ -1,162 +1,805 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portifólio IgorAlcantara</title>
-</head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Daniel Confecções Serigrafia ERP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
 
+body{
+background:#030712;
+color:white;
+overflow-x:hidden;
+}
+
+.gradient{
+background:linear-gradient(135deg,#7c3aed,#2563eb);
+}
+
+.glass{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+}
+
+.glow{
+box-shadow:0 0 40px rgba(124,58,237,.35);
+}
+
+.sidebar{
+background:rgba(3,7,18,.95);
+backdrop-filter:blur(18px);
+}
+
+.card-hover:hover{
+transform:translateY(-6px);
+transition:.3s;
+}
+
+.page{
+display:none;
+animation:fade .4s ease;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-bg{
+background:
+radial-gradient(circle at top left,rgba(124,58,237,.35),transparent 35%),
+radial-gradient(circle at bottom right,rgba(37,99,235,.25),transparent 35%),
+#030712;
+}
+</style>
+</head>
 <body>
 
-    <header>
-        <div class="tooop">
-            <a href="">Home</a>
-            <a href="">Sobre</a>
-            <a href="">Projetos</a>
-            <a href="">Visitar</a>
-        </div>
-    </header>
+<div class="flex min-h-screen">
 
-    <nav>
-        <img src="./Img/codcapa.jpg" alt="" class="codcapa">
-        <div class="topo">
-            <h1 class="h1-2">Olá, Eu sou <span>Igor Alcantara.</span></h1>
-            <p>Desenvolvedor criativo focado em construir experiências digitais de interface intuitíva</p><br>
-            <br><a href="">Que bom, ver você por aqui</a>
-        </div>
+<aside class="sidebar fixed left-0 top-0 h-full w-80 border-r border-white/10 p-7 z-50">
+
+<div>
+<div class="gradient w-16 h-16 rounded-3xl flex items-center justify-center text-3xl font-black glow">
+D
+</div>
+
+<h1 class="text-3xl font-black mt-6 leading-tight">
+Daniel Confecções
+</h1>
+
+<p class="text-gray-400 mt-3 leading-relaxed">
+ERP Premium para Confecção, Produção e Serigrafia.
+</p>
+</div>
+
+<div class="mt-12 space-y-4">
+
+<button onclick="openPage('inicio')" class="menuBtn w-full text-left glass rounded-2xl p-5 hover:bg-white/10 transition">
+<div class="flex items-center gap-4">
+<div class="text-2xl">🏠</div>
+<div>
+<h3 class="font-bold">Visão Geral</h3>
+<p class="text-sm text-gray-400 mt-1">Apresentação Premium</p>
+</div>
+</div>
+</button>
+
+<button onclick="openPage('criacao')" class="menuBtn w-full text-left glass rounded-2xl p-5 hover:bg-white/10 transition">
+<div class="flex items-center gap-4">
+<div class="text-2xl">🎨</div>
+<div>
+<h3 class="font-bold">Criar Projeto</h3>
+<p class="text-sm text-gray-400 mt-1">Experiência do Cliente</p>
+</div>
+</div>
+</button>
+
+<button onclick="openPage('orcamentos')" class="menuBtn w-full text-left glass rounded-2xl p-5 hover:bg-white/10 transition">
+<div class="flex items-center gap-4">
+<div class="text-2xl">📋</div>
+<div>
+<h3 class="font-bold">Central Projetos</h3>
+<p class="text-sm text-gray-400 mt-1">Orçamentos e Produção</p>
+</div>
+</div>
+</button>
+
+<button onclick="openPage('producao')" class="menuBtn w-full text-left glass rounded-2xl p-5 hover:bg-white/10 transition">
+<div class="flex items-center gap-4">
+<div class="text-2xl">🏭</div>
+<div>
+<h3 class="font-bold">Produção</h3>
+<p class="text-sm text-gray-400 mt-1">Pipeline Operacional</p>
+</div>
+</div>
+</button>
+
+<button onclick="openPage('estoque')" class="menuBtn w-full text-left glass rounded-2xl p-5 hover:bg-white/10 transition">
+<div class="flex items-center gap-4">
+<div class="text-2xl">🧵</div>
+<div>
+<h3 class="font-bold">Estoque Inteligente</h3>
+<p class="text-sm text-gray-400 mt-1">Controle Materiais</p>
+</div>
+</div>
+</button>
+
+</div>
+
+<div class="glass rounded-3xl p-6 mt-12">
+<p class="text-sm text-gray-400">Sistema Operacional</p>
+<h3 class="text-4xl font-black mt-3">ONLINE</h3>
+
+<div class="flex items-center gap-3 mt-5">
+<div class="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+<p class="text-green-400">Atualização em tempo real</p>
+</div>
+</div>
+
+</aside>
+
+<main class="ml-80 w-full p-10">
+
+<section id="inicio" class="page active">
+
+<div class="hero-bg rounded-[40px] p-14 overflow-hidden relative border border-white/10">
+
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-600/20 blur-[140px] rounded-full"></div>
+
+<div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+
+<div>
+
+<div class="inline-flex items-center gap-3 glass px-5 py-3 rounded-full mb-8">
+<div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+<span class="text-sm">ERP Industrial Premium</span>
+</div>
+
+<h1 class="text-7xl font-black leading-[1.05]">
+A nova operação digital da sua serigrafia.
+</h1>
+
+<p class="text-gray-300 text-xl leading-relaxed mt-8 max-w-2xl">
+Controle pedidos, tecidos, produção, serigrafia, estoque e clientes em um único sistema premium pensado para transformar a Daniel Confecções Serigrafia em uma operação profissional de alto padrão.
+</p>
+
+<div class="flex gap-5 mt-10 flex-wrap">
+<button onclick="openPage('criacao')" class="gradient px-10 py-5 rounded-2xl text-lg font-bold glow hover:scale-105 transition">
+Iniciar Projeto
+</button>
+
+<button onclick="openPage('orcamentos')" class="glass px-10 py-5 rounded-2xl text-lg hover:bg-white/10 transition">
+Ver Produção
+</button>
+</div>
+
+<div class="grid grid-cols-3 gap-5 mt-14">
+
+<div class="glass rounded-3xl p-6">
+<p class="text-gray-400 text-sm">Produção</p>
+<h3 class="text-4xl font-black mt-3">96%</h3>
+</div>
+
+<div class="glass rounded-3xl p-6">
+<p class="text-gray-400 text-sm">Pedidos</p>
+<h3 class="text-4xl font-black mt-3">128</h3>
+</div>
+
+<div class="glass rounded-3xl p-6">
+<p class="text-gray-400 text-sm">Faturamento</p>
+<h3 class="text-4xl font-black mt-3">R$48k</h3>
+</div>
+
+</div>
+
+</div>
+
+<div class="glass rounded-[35px] p-8 border border-white/10">
+
+<div class="flex justify-between items-center mb-8">
+<div>
+<p class="text-gray-400">Produção Inteligente</p>
+<h3 class="text-3xl font-black mt-2">Central Operacional</h3>
+</div>
+
+<div class="gradient px-5 py-3 rounded-2xl glow">
+Ativa
+</div>
+</div>
+
+<div class="space-y-5">
+
+<div class="glass rounded-2xl p-5">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="text-xl font-bold">Pedido #2048</h4>
+<p class="text-gray-400 mt-2">250 Uniformes Empresariais</p>
+</div>
+
+<div class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">
+Serigrafia
+</div>
+</div>
+
+<div class="w-full bg-white/10 rounded-full h-3 mt-6 overflow-hidden">
+<div class="gradient h-full w-[82%]"></div>
+</div>
+</div>
+
+<div class="glass rounded-2xl p-5">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="text-xl font-bold">Estoque Inteligente</h4>
+<p class="text-gray-400 mt-2">Dry Fit abaixo do mínimo operacional.</p>
+</div>
+
+<div class="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full">
+Alerta
+</div>
+</div>
+</div>
+
+<div class="glass rounded-2xl p-5">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="text-xl font-bold">IA Operacional</h4>
+<p class="text-gray-400 mt-2">Sistema calculou automaticamente tecido, custo e produção.</p>
+</div>
+
+<div class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full">
+Online
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="grid lg:grid-cols-3 gap-7 mt-10">
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="text-5xl">🎯</div>
+<h3 class="text-3xl font-black mt-6">Experiência Profissional</h3>
+<p class="text-gray-400 leading-relaxed mt-5">
+O cliente sente que participa da criação real da peça e acompanha toda produção em tempo real.
+</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="text-5xl">⚡</div>
+<h3 class="text-3xl font-black mt-6">Automação Industrial</h3>
+<p class="text-gray-400 leading-relaxed mt-5">
+Sistema calcula automaticamente tecido, prazo, margem, custo operacional e produção.
+</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="text-5xl">📈</div>
+<h3 class="text-3xl font-black mt-6">Central Operacional</h3>
+<p class="text-gray-400 leading-relaxed mt-5">
+Pedidos, produção, estoque e clientes organizados em um único ambiente premium.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="criacao" class="page">
+
+<div class="flex justify-between items-center flex-wrap gap-6 mb-10">
+<div>
+<h2 class="text-6xl font-black">Criação do Projeto</h2>
+<p class="text-gray-400 text-xl mt-3">
+O cliente sente que está criando a peça junto com a produção.
+</p>
+</div>
+
+<div class="gradient px-7 py-4 rounded-2xl glow">
+Experiência Interativa
+</div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-10">
+
+<div class="glass rounded-[35px] p-8 space-y-6">
+
+<div>
+<label class="block text-gray-400 mb-3">Tipo da Peça</label>
+<select id="tipo" class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg">
+<option>Camiseta Premium</option>
+<option>Oversized</option>
+<option>Uniforme Empresarial</option>
+<option>Moletom</option>
+</select>
+</div>
+
+<div>
+<label class="block text-gray-400 mb-3">Modelo</label>
+<select id="modelo" class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg">
+<option>Luxo</option>
+<option>Industrial</option>
+<option>Tradicional</option>
+</select>
+</div>
+
+<div>
+<label class="block text-gray-400 mb-3">Tecido</label>
+<select id="tecido" class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg">
+<option value="18">Algodão Premium</option>
+<option value="24">Dry Fit</option>
+<option value="32">Poliéster</option>
+</select>
+</div>
+
+<div>
+<label class="block text-gray-400 mb-3">Estampa</label>
+<select id="estampa" class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg">
+<option>Serigrafia Silk</option>
+<option>DTF</option>
+<option>Bordado</option>
+<option>Sublimação</option>
+</select>
+</div>
+
+<div class="grid grid-cols-2 gap-5">
+<div>
+<label class="block text-gray-400 mb-3">Quantidade</label>
+<input id="quantidade" type="number" value="50" class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg" />
+</div>
+
+<div>
+<label class="block text-gray-400 mb-3">Cor Principal</label>
+<input id="cor" type="color" value="#7c3aed" class="w-full h-[66px] rounded-2xl" />
+</div>
+</div>
+
+<div>
+<label class="block text-gray-400 mb-3">Descrição do Projeto</label>
+<textarea id="descricao" rows="5" placeholder="Descreva referências, estilo, arte e detalhes da produção..." class="w-full bg-black/30 border border-white/10 rounded-2xl p-5 text-lg"></textarea>
+</div>
+
+<button onclick="gerarProjeto()" class="gradient w-full py-6 rounded-2xl text-xl font-black glow hover:scale-[1.02] transition">
+Gerar Projeto Inteligente
+</button>
+
+</div>
+
+<div class="glass rounded-[35px] p-8 flex flex-col justify-between">
+
+<div>
+<div class="flex justify-between items-center mb-10">
+<div>
+<p class="text-gray-400">Preview Inteligente</p>
+<h3 class="text-4xl font-black mt-2">Projeto Visual</h3>
+</div>
+
+<div class="bg-green-500/20 text-green-400 px-5 py-3 rounded-full">
+Renderizado
+</div>
+</div>
+
+<div class="flex justify-center py-10">
+<svg id="camisa" width="260" height="280" viewBox="0 0 200 220" fill="#7c3aed" class="transition-all duration-300 drop-shadow-[0_0_40px_rgba(124,58,237,.6)]">
+<path d="M60 20L80 0H120L140 20L180 40L160 80L140 70V210H60V70L40 80L20 40Z"></path>
+</svg>
+</div>
+</div>
+
+<div class="space-y-5 mt-10">
+
+<div class="glass rounded-2xl p-6 flex justify-between items-center">
+<div>
+<p class="text-gray-400">Tecido Necessário</p>
+<h4 class="text-3xl font-black mt-2" id="resultadoTecido">0m</h4>
+</div>
+
+<div class="text-4xl">🧵</div>
+</div>
+
+<div class="glass rounded-2xl p-6 flex justify-between items-center">
+<div>
+<p class="text-gray-400">Produção</p>
+<h4 class="text-3xl font-black mt-2" id="resultadoCusto">R$0</h4>
+</div>
+
+<div class="text-4xl">🏭</div>
+</div>
+
+<div class="gradient rounded-2xl p-7 flex justify-between items-center glow">
+<div>
+<p class="opacity-80">Valor Final</p>
+<h4 class="text-4xl font-black mt-2" id="resultadoFinal">R$0</h4>
+</div>
+
+<div class="text-5xl">💎</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="orcamentos" class="page">
+
+<div class="flex justify-between items-center flex-wrap gap-6 mb-10">
+<div>
+<h2 class="text-6xl font-black">Central de Projetos</h2>
+<p class="text-gray-400 text-xl mt-3">Controle operacional dos orçamentos.</p>
+</div>
+
+<div class="flex gap-4 flex-wrap">
+<div class="bg-green-500/20 text-green-400 px-6 py-4 rounded-2xl">Ativos</div>
+<div class="bg-yellow-500/20 text-yellow-400 px-6 py-4 rounded-2xl">Pendentes</div>
+<div class="bg-blue-500/20 text-blue-400 px-6 py-4 rounded-2xl">Em Produção</div>
+</div>
+</div>
+
+<div class="glass rounded-[35px] p-8 overflow-x-auto">
+
+<table class="w-full min-w-[1000px]">
+<thead>
+<tr class="text-left border-b border-white/10 text-gray-400">
+<th class="pb-5">Projeto</th>
+<th class="pb-5">Cliente</th>
+<th class="pb-5">Produção</th>
+<th class="pb-5">Status</th>
+<th class="pb-5">Valor</th>
+<th class="pb-5">Ações</th>
+</tr>
+</thead>
+
+<tbody id="listaProjetos">
+
+<tr class="border-b border-white/5 hover:bg-white/5 transition">
+<td class="py-6 font-bold">Uniformes Atlas</td>
+<td>Empresa Atlas</td>
+<td>250 peças</td>
+<td>
+<span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm">
+Em Produção
+</span>
+</td>
+<td>R$ 4.800</td>
+<td>
+<div class="flex gap-3">
+<button class="glass px-4 py-2 rounded-xl hover:bg-white/10 transition">PDF</button>
+<a target="_blank" href="https://wa.me/553484052555" class="gradient px-4 py-2 rounded-xl">
+WhatsApp
+</a>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</section>
+
+<section id="producao" class="page">
+
+<h2 class="text-6xl font-black">Pipeline Operacional</h2>
+<p class="text-gray-400 text-xl mt-4">
+Fluxo profissional da produção industrial.
+</p>
+
+<div class="grid lg:grid-cols-5 gap-6 mt-12">
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="gradient w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black glow">
+1
+</div>
+<h3 class="text-3xl font-black mt-8">Pedido</h3>
+<p class="text-gray-400 mt-4">Entrada operacional.</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="bg-blue-500 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black">
+2
+</div>
+<h3 class="text-3xl font-black mt-8">Corte</h3>
+<p class="text-gray-400 mt-4">Separação tecidos.</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="bg-pink-500 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black">
+3
+</div>
+<h3 class="text-3xl font-black mt-8">Costura</h3>
+<p class="text-gray-400 mt-4">Produção peças.</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="bg-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black">
+4
+</div>
+<h3 class="text-3xl font-black mt-8">Serigrafia</h3>
+<p class="text-gray-400 mt-4">Aplicação estampas.</p>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black">
+5
+</div>
+<h3 class="text-3xl font-black mt-8">Entrega</h3>
+<p class="text-gray-400 mt-4">Finalização pedido.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="estoque" class="page">
+
+<h2 class="text-6xl font-black">Estoque Inteligente</h2>
+<p class="text-gray-400 text-xl mt-4">
+Controle premium de materiais.
+</p>
+
+<div class="grid lg:grid-cols-3 gap-8 mt-12">
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-gray-400">Algodão Premium</p>
+<h3 class="text-5xl font-black mt-4">120m</h3>
+</div>
+
+<div class="text-5xl">🧵</div>
+</div>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-gray-400">Tintas</p>
+<h3 class="text-5xl font-black mt-4">48L</h3>
+</div>
+
+<div class="text-5xl">🎨</div>
+</div>
+</div>
+
+<div class="glass rounded-[35px] p-8 card-hover">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-gray-400">Produção</p>
+<h3 class="text-5xl font-black mt-4">340</h3>
+</div>
+
+<div class="text-5xl">📦</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script>
+
+function openPage(pageId){
+const pages=document.querySelectorAll('.page');
+pages.forEach(page=>{
+page.classList.remove('active');
+});
+
+document.getElementById(pageId).classList.add('active');
+}
+
+const camisa=document.getElementById('camisa');
+const cor=document.getElementById('cor');
+
+cor.addEventListener('input',()=>{
+camisa.setAttribute('fill',cor.value);
+});
+
+function gerarProjeto(){
+
+const tipo=document.getElementById('tipo').value;
+const modelo=document.getElementById('modelo').value;
+const tecido=document.getElementById('tecido');
+const tecidoNome=tecido.options[tecido.selectedIndex].text;
+const tecidoValor=Number(tecido.value);
+const estampa=document.getElementById('estampa').value;
+const quantidade=Number(document.getElementById('quantidade').value);
+const descricao=document.getElementById('descricao').value;
+
+const metros=(quantidade/4).toFixed(1);
+const custo=(metros*tecidoValor).toFixed(0);
+const valorFinal=(custo*2.8).toFixed(0);
 
 
-        <div class="formulario">
-            <h5>Entre em Contato:</h5>
-            <form onsubmit="dadosFormulario()" class="formulario-1">
+document.getElementById('resultadoTecido').innerText=metros+'m';
+document.getElementById('resultadoCusto').innerText='R$ '+custo;
+document.getElementById('resultadoFinal').innerText='R$ '+valorFinal;
 
-                <label for="nome">Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui" id="nome" name="nome required>
-        
-                <label for=" Email">Email:</label>
-                <input type="email" placeholder="Digite seu Email." id="email" name="email" required>
+const popup=document.createElement('div');
 
-                <label for="tell">Tell:</label>
-                <input type="tel" placeholder="telefone pra Contato." id="tell" name="tell" required>
+popup.className='fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-8';
 
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+popup.innerHTML=`
+<div class="glass rounded-[40px] p-10 max-w-5xl w-full max-h-[95vh] overflow-y-auto fade">
 
-    </nav>
+<div class="flex justify-between items-start flex-wrap gap-8">
+<div>
+<div class="bg-green-500/20 text-green-400 px-5 py-3 rounded-full inline-flex mb-5">
+Projeto Gerado
+</div>
 
-    <main class="content-1">
-        <img src="./Img/gorilarobo.jpg" alt="" class="gorilarobo">
-        <div>
-            <img src="./Img/perfiltodos.jpg" alt="" class="perfil">
-        </div>
+<h2 class="text-6xl font-black leading-tight">
+Seu projeto está pronto.
+</h2>
 
-        <div class="content-text">
-            <h2>Desenvolvedor Software</h2><br>
-            <p>Olá, meu nome é Igor. Sou um desenvolverdor apaixonado Por tecnologia da informação, dedicado a trabalhar
-                e melhorar a cada dia meus conhecimentos aplicando estudos e projétos prático e encarando cada desafio
-                com total cofiança e convicção, Sempre me comprometendo entregar o melhor que eu tenho, aos meus
-                superiores a equipes de
-                trabalho e a todos relacionado.</p>
-            <h6>Habi<span>lidades</span></h6>
-            <ul>
-                <li><a href="">HTML:5</a></li>
-                <li><a href="">CSS</a></li>
-                <li><a href="">GIT</a></li>
-                <li><a href="">GITHUB</a></li>
-                <li><a href="">JAVASCRIPT</a></li>
-                <li><a href="">REACT</a></li>
-            </ul>
+<p class="text-gray-400 text-xl mt-6 max-w-3xl leading-relaxed">
+Agora o cliente sente que participou da criação completa da peça, visualizou o planejamento operacional e recebeu uma experiência profissional de produção.
+</p>
+</div>
 
-        </div>
-    </main>
-    <h3>Pro<span>jétos</span></h3>
+<div class="gradient rounded-[30px] p-8 glow text-center min-w-[240px]">
+<p class="opacity-80">Valor Final</p>
+<h3 class="text-6xl font-black mt-4">R$ ${valorFinal}</h3>
+</div>
+</div>
 
+<div class="grid lg:grid-cols-2 gap-8 mt-12">
 
-    <img src="./Img/gorilaroobo.jpg" alt="" class="kingkong">
+<div class="glass rounded-[30px] p-8">
+<h3 class="text-3xl font-black mb-8">Projeto</h3>
 
+<div class="space-y-5 text-lg">
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Tipo</span>
+<strong>${tipo}</strong>
+</div>
 
-    <section class="content-2">
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Modelo</span>
+<strong>${modelo}</strong>
+</div>
 
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Tecido</span>
+<strong>${tecidoNome}</strong>
+</div>
 
-        <div class="todo-conteudo">
-            <div class="content-itens">
-                <img src="./Img/logoinstagrammmm.jpg" alt="" class="tec">
-                <p>Projéto Clone Instagram</p>
-                <a href="https://github.com/IgorDev01-01max/Projeto-anima--o-1/blob/main/index.html">projeto</a>
-            </div>
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Estampa</span>
+<strong>${estampa}</strong>
+</div>
 
-            <div class="content-itens">
-                <img src="./Img/conversor de moedas.jpg" alt="">
-                <p>Conversor de moédas</p>
-                <a>projeto</a>
-            </div>
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Quantidade</span>
+<strong>${quantidade} peças</strong>
+</div>
+</div>
+</div>
 
-            <div class="content-itens">
-                <img src="./Img/calc.jpg" alt="">
-                <p>Calculadora digital</p>
-                <a>projeto</a>
-            </div>
+<div class="glass rounded-[30px] p-8">
+<h3 class="text-3xl font-black mb-8">Planejamento Operacional</h3>
 
-            <div class="content-itens">
-                <img src="./Img/All home offce 4.jpg" alt="">
-                <p>Portifólio Pessoal</p>
-                <a href="https://github.com/IgorDev01-01max/Projeto-text-xp">projeto</a>
-            </div>
+<div class="space-y-5 text-lg">
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Tecido Necessário</span>
+<strong>${metros}m</strong>
+</div>
 
-        </div>
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Custo Produção</span>
+<strong>R$ ${custo}</strong>
+</div>
 
-    </section>
+<div class="flex justify-between border-b border-white/5 pb-4">
+<span>Status</span>
+<strong class="text-green-400">Ativo</strong>
+</div>
+</div>
 
-    <section class="content-3">
-        <div class="todo-conteudo">
-            <div class="content-itens">
-                <img src="./Img/robo all home offce.jpg" alt="">
-                <p>description</p>
-                <a>projeto</a>
-            </div>
+<div class="glass rounded-2xl p-5 mt-8">
+<p class="text-gray-400 text-sm mb-3">Descrição Cliente</p>
+<p class="leading-relaxed">${descricao||'Projeto premium personalizado.'}</p>
+</div>
+</div>
 
-            <div class="content-itens">
-                <img src="./Img/conversor de moedas.jpg" alt="">
-                <p>Conversor de moédas</p>
-                <a>projeto</a>
-            </div>
+</div>
 
-            <div class="content-itens">
-                <img src="./Img/calc.jpg" alt="">
-                <p>description</p>
-                <a>projeto</a>
-            </div>
+<div class="grid lg:grid-cols-3 gap-5 mt-12">
 
-            <div class="content-itens">
-                <img src="./Img/All home offce 4.jpg" alt="">
-                <p>description</p>
-                <a class="upa">projeto</a>
-            </div>
+<a target="_blank" href="https://wa.me/553484052555?text=Olá,%20quero%20fechar%20o%20projeto%20${tipo}%20com%20${quantidade}%20peças.%20Valor:%20R$${valorFinal}" class="gradient text-center py-6 rounded-2xl text-xl font-black glow hover:scale-[1.02] transition">
+Fechar no WhatsApp
+</a>
 
-        </div>
-    </section>
+<button onclick="alert('PDF gerado na demonstração.')" class="glass py-6 rounded-2xl text-xl font-bold hover:bg-white/10 transition">
+Baixar PDF
+</button>
 
-</body>
+<button onclick="this.closest('.fixed').remove()" class="glass py-6 rounded-2xl text-xl font-bold hover:bg-white/10 transition">
+Continuar
+</button>
 
+</div>
 
+</div>
+`;
 
-<script src="./script.js">
-    function enviarFormulario() {
-        let nome = document.getElementById("nome").value;
-        let email = document.getElementById("email").value;
-        let tell = document.getElementById("tell").value;
+document.body.appendChild(popup);
 
-        let dadosFormulario = {
-            nome: nome,
-            email: email,
-            tell: tell
-        };
+adicionarProjeto(tipo,quantidade,valorFinal);
 
+}
 
-    }
+function adicionarProjeto(tipo,quantidade,valor){
+
+const lista=document.getElementById('listaProjetos');
+
+const tr=document.createElement('tr');
+
+tr.className='border-b border-white/5 hover:bg-white/5 transition';
+
+tr.innerHTML=`
+<td class="py-6 font-bold">${tipo}</td>
+<td>Cliente Premium</td>
+<td>${quantidade} peças</td>
+<td>
+<span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm">
+Ativo
+</span>
+</td>
+<td>R$ ${valor}</td>
+<td>
+<div class="flex gap-3">
+<button onclick="alert('PDF gerado.')" class="glass px-4 py-2 rounded-xl hover:bg-white/10 transition">
+PDF
+</button>
+<a target="_blank" href="https://wa.me/553484052555" class="gradient px-4 py-2 rounded-xl">
+WhatsApp
+</a>
+</div>
+</td>
+`;
+
+lista.prepend(tr);
+
+openPage('orcamentos');
+
+}
+
 </script>
 
+</body>
 </html>
